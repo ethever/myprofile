@@ -4,6 +4,8 @@ const express = require("express")
 const app = express();
 
 
+app.use("/public", express.static("../source/css"))
+
 app.get("/", function(req, res){
     res.sendfile("/root/test/myprofile/source/index.html");
 })
